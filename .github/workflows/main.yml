@@ -40,6 +40,6 @@ jobs:
           cl
           
       - name: myfile
-        run: cl/c myfile.cpp
+        run: cl myfile.cpp
           
       
