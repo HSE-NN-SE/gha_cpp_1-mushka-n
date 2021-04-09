@@ -29,7 +29,10 @@ jobs:
       - name: print env
         run: env
         
-      - name: myfile
+      - name: Enable Developer Command Prompt
+        uses: ilammy/msvc-dev-cmd@v1.7.0
+        
+      - name: Build something requiring CL.EXE
         run: |
           ls
           cl
