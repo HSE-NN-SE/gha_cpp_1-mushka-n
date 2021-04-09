@@ -30,4 +30,6 @@ jobs:
         run: env
         
       - name: myfile
-        run: cl/myfile.cpp
+        run: |
+          ls
+          cl
