@@ -24,24 +24,9 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
-    # Runs a single command using the runners shell
-      - name: print env
-        run: env
-        
+ 
       - name: Enable Developer Command Prompt
         uses: ilammy/msvc-dev-cmd@v1.7.0
-        
-      - name: Build something requiring CL.EXE
-        run: |
-          ls
-          cl
-          
-      - name: compile
-        run:  g++ myfile.cpp -o main
-          
-      #- name: out
-      #  run: cl/HE myfile.cpp
           
       - name: artifact
         uses: actions/upload-artifact@v2
