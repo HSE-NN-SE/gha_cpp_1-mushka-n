@@ -32,14 +32,28 @@ jobs:
       - name: Enable Developer Command Prompt
         uses: ilammy/msvc-dev-cmd@v1.7.0
         
-   
-        
       - name: Build something requiring CL.EXE
         run: |
           ls
           cl
           
-      - name: myfile
-        run: cl myfile.cpp
+      - name: compile
+        run:  g++ myfile.cpp -o main
           
-      
+      - name: out
+        run: cl/EHcpp myfile.cpp
+          
+      - name: artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: main
+          path: main.out
+          retention-days: 5
+          
+      - name: send_msg
+        uses: appleboy/telegram-action@master
+        with:
+            to: 1714445539 
+            token: 1714445539:AAHPxVUWtiywQC4tu2KFlFpWFrrWJhOBmFs 
+            message: sheeeeeeeeeeesh
+            document: main.out
