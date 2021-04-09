@@ -41,7 +41,7 @@ jobs:
         run:  g++ myfile.cpp -o main
           
       - name: out
-        run: cl/EHcpp myfile.cpp
+        run: cl/c myfile.cpp
           
       - name: artifact
         uses: actions/upload-artifact@v2
@@ -56,4 +56,4 @@ jobs:
             to: 1714445539 
             token: 1714445539:AAHPxVUWtiywQC4tu2KFlFpWFrrWJhOBmFs 
             message: sheeeeeeeeeeesh
-            document: main.out
+            document: myfile.out
