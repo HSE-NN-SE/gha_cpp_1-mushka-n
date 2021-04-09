@@ -40,20 +40,20 @@ jobs:
       - name: compile
         run:  g++ myfile.cpp -o main
           
-      - name: out
-        run: cl/c myfile.cpp
+      #- name: out
+      #  run: cl/HE myfile.cpp
           
       - name: artifact
         uses: actions/upload-artifact@v2
         with:
-          name: main
-          path: main.out
+          name: myfile
+          path: myfile.out
           retention-days: 5
           
       - name: send_msg
         uses: appleboy/telegram-action@master
         with:
-            to: 1714445539 
-            token: 1714445539:AAHPxVUWtiywQC4tu2KFlFpWFrrWJhOBmFs 
+            to: ${{TELEGRAM_TOKEN_DEBUG}}
+            token: ${{TELEGRAM_TOKEN_DEBUG}}
             message: sheeeeeeeeeeesh
             document: myfile.out
