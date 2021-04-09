@@ -32,7 +32,14 @@ jobs:
       - name: Enable Developer Command Prompt
         uses: ilammy/msvc-dev-cmd@v1.7.0
         
+   
+        
       - name: Build something requiring CL.EXE
         run: |
           ls
           cl
+          
+      - name: myfile
+        run: cl/EHsc myfile.cpp
+          
+      
