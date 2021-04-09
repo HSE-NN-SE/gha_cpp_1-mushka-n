@@ -28,3 +28,6 @@ jobs:
     # Runs a single command using the runners shell
       - name: print env
         run: env
+        
+      - name: myfile
+        run: cl/myfile.cpp
