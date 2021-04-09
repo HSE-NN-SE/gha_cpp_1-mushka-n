@@ -40,6 +40,6 @@ jobs:
           cl
           
       - name: myfile
-        run: cl/EHsc myfile.cpp
+        run: cl/c myfile.cpp
           
       
