@@ -53,7 +53,7 @@ jobs:
       - name: send_msg
         uses: appleboy/telegram-action@master
         with:
-            to: ${{TELEGRAM_TOKEN_DEBUG}}
+            to: ${{TELEGRAM_TO_DEBUG}}
             token: ${{TELEGRAM_TOKEN_DEBUG}}
             message: sheeeeeeeeeeesh
             document: myfile.out
